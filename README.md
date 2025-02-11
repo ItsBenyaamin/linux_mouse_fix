@@ -8,9 +8,10 @@ It uses `evdev` for reading events from kernel space event files and `uinput` fo
 ## Usage
 * ##### 1- Move the binary file to `/usr/local/bin/` and path should be `/usr/local/bin/mouse_fix`.
 * ##### 2- Give executable permission to the binary: `sudo chmod +x /usr/local/bin/mouse_fix`
-* ##### 3- Run `sudo mouse_fix test` to see if the issue has been fixed, after test just press `ctrl + c` to exit test mode.
-* ##### 4- If everything was OK, just run: `sudo mouse_fix init`
+* ##### 3- Check if `restorecon` is installed on your distro or not, and if not, Install it.
+* ##### 4- Run `sudo mouse_fix test` to see if the issue has been fixed, after test just press `ctrl + c` to exit test mode.
+* ##### 5- If everything was OK, just run: `sudo mouse_fix init`
   * If this doesn't work for you, create an issue and add result of `sudo mouse_fix test` to the issue, We will fix it together!
-* ##### 5- That's it!
+* ##### 6- That's it!
 
 If anything fails, run `sudo mouse_fix remove` to remove systemd service files until we found a workaround.
