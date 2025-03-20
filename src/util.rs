@@ -6,13 +6,11 @@ use std::path::Path;
 const SERVICE_FILE_PATH: &str = "/etc/systemd/system/mouse_fix.service";
 
 pub fn create_service_file(exec_path: &str) {
-    std::process::Command::new("restorecon")
+    let _ = std::process::Command::new("restorecon")
         .arg(exec_path)
-        .output()
-        .unwrap();
+        .output();
 
-    let mut file = File::create(SERVICE_FILE_PATH)
-        .expect("Couldn't create service file!");
+    let mut file = File::create(SERVICE_FILE_PATH).expect("Couldn't create service file!");
 
     let service_content = r#"[Unit]
 Description=Fix mouse movement issue
