@@ -19,7 +19,7 @@ fn main() {
     let args = env::args().collect::<Vec<String>>();
     if args.len() == 1 {
         op = "capture"
-    }else {
+    } else {
         op = args[1].as_str();
     }
 
@@ -58,10 +58,8 @@ fn main() {
             println!("  remove:");
             println!("      removes the created service file.");
             println!("\n<Developed by Benyamin Eskandari/>");
-            println!("-- Website: benyaamin.com");
-            println!("-- Email: me@benyaamin.com");
-            println!("-- Github: @graymind75");
-            println!("-- Youtube: @Ben_Creates");
+            println!("-- Website: https://me.benyaamin.com");
+            println!("-- Github: @ItsBenyaamin");
         }
 
         _ => {}
